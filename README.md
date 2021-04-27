@@ -16,8 +16,8 @@ Some thoughts from architecture perspective
 If this shopping system expands into real commercial project, I would propose using clean/hexagonal architecture, DDD to,
 - Draw the business boundary/context among catalogue, pricing, shopping as different logical modules
 - For each of the modules, we could structure them into (in hexagonal architecture terms)
-  - Input Adapter (interface) and Port (implementation) to handle incoming request from Rest Controller, batch job or even messaging system
-  - Output Adapter (interface) and Port (implementation) to persist data into DB, send data to downstream webservices or messaging system 
+  - Input Adapter (implementation) and Port (interface) to handle incoming request from Rest Controller, batch job or even messaging system
+  - Output Adapter (implementation) and Port (interface) to persist data into DB, send data to downstream webservices or messaging system 
   - Service to implement user stories or use cases
   - Domain Object to capture most of the complex business domain logic if possible (But it really depends on the nature of the application)
 - For pure CRUD kind of application, DDD might not be that relevant.
